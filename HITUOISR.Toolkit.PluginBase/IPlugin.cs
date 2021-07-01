@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HITUOISR.Toolkit.Settings;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Reflection;
 
@@ -14,6 +15,12 @@ namespace HITUOISR.Toolkit.PluginBase
         /// </summary>
         /// <param name="services">用于添加的服务集合。</param>
         void ConfigureServices(IServiceCollection services);
+
+        /// <summary>
+        /// 配置设置。
+        /// </summary>
+        /// <param name="settings">设置构造器。</param>
+        void ConfigureSettings(ISettingsBuilder settings);
 
         /// <summary>
         /// 插件名称。
