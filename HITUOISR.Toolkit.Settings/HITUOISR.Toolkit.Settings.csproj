@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+    <LangVersion>9</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HITUOISR.Toolkit.Common\HITUOISR.Toolkit.Common.csproj" />
+    <ProjectReference Include="..\HITUOISR.Toolkit.Settings.Abstraction\HITUOISR.Toolkit.Settings.Abstraction.csproj" />
+  </ItemGroup>
+
+</Project>
