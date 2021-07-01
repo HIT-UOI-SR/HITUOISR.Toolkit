@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\HITUOISR.Toolkit.Common\HITUOISR.Toolkit.Common.csproj" />
     <ProjectReference Include="..\HITUOISR.Toolkit.Settings.Abstraction\HITUOISR.Toolkit.Settings.Abstraction.csproj" />
   </ItemGroup>
 
