@@ -1,16 +1,17 @@
 ﻿using HITUOISR.Toolkit.Common;
+using HITUOISR.Toolkit.PluginBase;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace HITUOISR.Toolkit.PluginBase
+namespace HITUOISR.Toolkit.SimpleHost.PluginTools
 {
     /// <summary>
     /// 插件管理器。
     /// </summary>
-    public sealed class PluginManager : IPluginManager
+    internal sealed class PluginManager : IPluginManager
     {
         private readonly IServiceProvider _services;
         private readonly ILogger<PluginManager> _logger;
@@ -20,7 +21,7 @@ namespace HITUOISR.Toolkit.PluginBase
         /// </summary>
         /// <param name="services"></param>
         /// <param name="logger"></param>
-        internal PluginManager(IServiceProvider services, ILogger<PluginManager> logger)
+        public PluginManager(IServiceProvider services, ILogger<PluginManager> logger)
         {
             _services = services;
             _logger = logger;
@@ -31,7 +32,7 @@ namespace HITUOISR.Toolkit.PluginBase
         /// </summary>
         /// <param name="logAtions"></param>
         /// <returns></returns>
-        internal PluginManager RestoreLazyLogger(Queue<Action<ILogger>> logAtions)
+        public PluginManager RestoreLazyLogger(Queue<Action<ILogger>> logAtions)
         {
             while (logAtions.TryDequeue(out var action))
             {
