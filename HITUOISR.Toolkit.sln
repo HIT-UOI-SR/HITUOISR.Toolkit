@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.XunitExten
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Common", "HITUOISR.Toolkit.Common\HITUOISR.Toolkit.Common.csproj", "{7AF7A06A-F467-45E7-A727-561A4F71DA21}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings", "HITUOISR.Toolkit.Settings\HITUOISR.Toolkit.Settings.csproj", "{0C705FA8-DFCB-4044-AE9C-0B405153704B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C705FA8-DFCB-4044-AE9C-0B405153704B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C705FA8-DFCB-4044-AE9C-0B405153704B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C705FA8-DFCB-4044-AE9C-0B405153704B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C705FA8-DFCB-4044-AE9C-0B405153704B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
