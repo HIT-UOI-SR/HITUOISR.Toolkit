@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.PluginBase", "HITUOISR.Toolkit.PluginBase\HITUOISR.Toolkit.PluginBase.csproj", "{56F6A4E1-157C-45BA-A0A1-0A530205088A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.PluginBase", "HITUOISR.Toolkit.PluginBase\HITUOISR.Toolkit.PluginBase.csproj", "{56F6A4E1-157C-45BA-A0A1-0A530205088A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings.Abstraction", "HITUOISR.Toolkit.Settings.Abstraction\HITUOISR.Toolkit.Settings.Abstraction.csproj", "{8664C0AC-1A3A-49A3-827F-E575D1A0C34A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.Abstraction", "HITUOISR.Toolkit.Settings.Abstraction\HITUOISR.Toolkit.Settings.Abstraction.csproj", "{8664C0AC-1A3A-49A3-827F-E575D1A0C34A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.XunitExtension", "HITUOISR.Toolkit.XunitExtension\HITUOISR.Toolkit.XunitExtension.csproj", "{8E841EE4-A9A1-4ED8-ABD3-6DCEFE27A637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.XunitExtension", "HITUOISR.Toolkit.XunitExtension\HITUOISR.Toolkit.XunitExtension.csproj", "{8E841EE4-A9A1-4ED8-ABD3-6DCEFE27A637}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Common", "HITUOISR.Toolkit.Common\HITUOISR.Toolkit.Common.csproj", "{7AF7A06A-F467-45E7-A727-561A4F71DA21}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{8E841EE4-A9A1-4ED8-ABD3-6DCEFE27A637}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E841EE4-A9A1-4ED8-ABD3-6DCEFE27A637}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E841EE4-A9A1-4ED8-ABD3-6DCEFE27A637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF7A06A-F467-45E7-A727-561A4F71DA21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
