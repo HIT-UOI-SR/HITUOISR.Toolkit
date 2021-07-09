@@ -11,15 +11,20 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.XunitExten
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Common", "HITUOISR.Toolkit.Common\HITUOISR.Toolkit.Common.csproj", "{7AF7A06A-F467-45E7-A727-561A4F71DA21}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings", "HITUOISR.Toolkit.Settings\HITUOISR.Toolkit.Settings.csproj", "{0C705FA8-DFCB-4044-AE9C-0B405153704B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings", "HITUOISR.Toolkit.Settings\HITUOISR.Toolkit.Settings.csproj", "{0C705FA8-DFCB-4044-AE9C-0B405153704B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings.FileBase", "HITUOISR.Toolkit.Settings.FileBase\HITUOISR.Toolkit.Settings.FileBase.csproj", "{D46DA624-C34F-40D9-B892-8D54C612FFA7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.FileBase", "HITUOISR.Toolkit.Settings.FileBase\HITUOISR.Toolkit.Settings.FileBase.csproj", "{D46DA624-C34F-40D9-B892-8D54C612FFA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings.Json", "HITUOISR.Toolkit.Settings.Json\HITUOISR.Toolkit.Settings.Json.csproj", "{40791C59-BDBF-41D0-8DE7-62B832C57254}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.Json", "HITUOISR.Toolkit.Settings.Json\HITUOISR.Toolkit.Settings.Json.csproj", "{40791C59-BDBF-41D0-8DE7-62B832C57254}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings.Model", "HITUOISR.Toolkit.Settings.Model\HITUOISR.Toolkit.Settings.Model.csproj", "{6ECEA8F9-D4DF-4E78-B35B-C57E0539478B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.Model", "HITUOISR.Toolkit.Settings.Model\HITUOISR.Toolkit.Settings.Model.csproj", "{6ECEA8F9-D4DF-4E78-B35B-C57E0539478B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.SimpleHost", "HITUOISR.Toolkit.SimpleHost\HITUOISR.Toolkit.SimpleHost.csproj", "{82AB505C-7211-40B8-8997-EFF7EF6498DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0FE98EE3-B183-47FE-8A2F-9EAD55E48730}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
