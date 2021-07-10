@@ -2,9 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
-    <LangVersion>9</LangVersion>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Nullable>enable</Nullable>
     <RootNamespace>HITUOISR.Toolkit.Settings</RootNamespace>
   </PropertyGroup>
 

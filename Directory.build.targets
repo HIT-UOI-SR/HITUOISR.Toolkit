@@ -1,0 +1,26 @@
+<Project>
+  <PropertyGroup>
+    <LangVersion>9</LangVersion>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <!-- AssemblyInfo -->
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+
+    <Company>Harbin Institute of Technology</Company>
+    <Product>HIT-UOI-SR Toolkit</Product>
+    <Copyright>Copyright © 2021 - $([System.DateTime]::Today.ToString(yyyy)) Harbin Institute of Technology</Copyright>
+
+    <Version Condition="'$(Version)' == ''">1.0.0.0</Version>
+    <PackageVersion Condition="'$(PackageVersion)' == ''">1.0.0</PackageVersion>
+    <AssemblyVersion Condition="'$(AssemblyVersion)' == ''">1.0.0.0</AssemblyVersion>
+    <FileVersion Condition="'$(FileVersion)' == ''">1.0.0.0</FileVersion>
+    <InformationalVersion Condition="'$(InformationalVersion)' == ''">1.0.0.0</InformationalVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="$(MSBuildProjectName).Tests"/>
+  </ItemGroup>
+</Project>
