@@ -1,7 +1,6 @@
 <Project>
   <PropertyGroup>
     <LangVersion>9</LangVersion>
-    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -20,7 +19,16 @@
     <InformationalVersion Condition="'$(InformationalVersion)' == ''">1.0.0.0</InformationalVersion>
   </PropertyGroup>
 
-  <ItemGroup>
+  <PropertyGroup>
+    <IsTestProject Condition="'$(IsTestProject)' == ''">false</IsTestProject>
+    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(IsTestProject)' != 'true'">
     <InternalsVisibleTo Include="$(MSBuildProjectName).Tests"/>
   </ItemGroup>
 </Project>
