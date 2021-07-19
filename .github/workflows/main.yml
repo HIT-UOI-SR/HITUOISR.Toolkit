@@ -42,7 +42,7 @@ jobs:
       run: dotnet restore
 
     - name: Build App
-      run: dotnet build
+      run: dotnet build --no-restore
 
     - name: Run Unit Tests
-      run: dotnet test
+      run: dotnet test --no-build
