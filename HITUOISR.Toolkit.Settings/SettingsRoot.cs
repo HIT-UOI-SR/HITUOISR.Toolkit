@@ -90,7 +90,7 @@ namespace HITUOISR.Toolkit.Settings
         /// <inheritdoc/>
         public void Reload()
         {
-            bool reloadRequest = true;
+            var reloadRequest = true;
             foreach (var key in _keys)
             {
                 foreach (var provider in _providers)

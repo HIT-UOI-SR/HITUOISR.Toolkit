@@ -19,7 +19,7 @@ namespace HITUOISR.Toolkit.Settings
         /// <inheritdoc/>
         public object? Value
         {
-            get => Provider != null && Provider.TryGet(KeyInfo.Path, out object? value) ? value : KeyInfo.DefaultValue;
+            get => Provider != null && Provider.TryGet(KeyInfo.Path, out var value) ? value : KeyInfo.DefaultValue;
             set
             {
                 if (value.IsAssignableToType(KeyInfo.Type))

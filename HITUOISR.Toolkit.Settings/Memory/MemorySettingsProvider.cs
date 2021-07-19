@@ -18,7 +18,7 @@ namespace HITUOISR.Toolkit.Settings.Memory
         /// <inheritdoc/>
         public override bool TryLoad(ISettingsKeyInfo key, bool reloadRequest = false)
         {
-            if (Source.Source.TryGetValue(key.Path, out object? value) && value.IsAssignableToType(key.Type))
+            if (Source.Source.TryGetValue(key.Path, out var value) && value.IsAssignableToType(key.Type))
             {
                 Data[key.Path] = value;
                 return true;

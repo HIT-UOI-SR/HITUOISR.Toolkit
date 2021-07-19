@@ -31,7 +31,7 @@ namespace HITUOISR.Toolkit.Settings.Tests
             new("text.hamlet", typeof(string)) { DefaultValue = string.Empty },
         };
 
-        sealed class SettingsKeyInfoEqualityComparer : EqualityComparer<ISettingsKeyInfo>
+        private sealed class SettingsKeyInfoEqualityComparer : EqualityComparer<ISettingsKeyInfo>
         {
             public override bool Equals(ISettingsKeyInfo? x, ISettingsKeyInfo? y) =>
                 x == null && y == null ||
