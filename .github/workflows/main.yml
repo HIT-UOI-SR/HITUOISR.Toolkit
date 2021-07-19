@@ -15,21 +15,28 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-    name: Build on ${{ matrix.os }} with .NET ${{ matrix.dotnet }}
+    name: Build on ${{ matrix.os }}
     strategy:
       matrix:
         os: [ 'windows-latest', 'macos-latest', 'ubuntu-latest' ]
-        dotnet: [ '3.1.x', '5.0.x' ]
     runs-on: ${{ matrix.os }}
 
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup .Net
+    - name: Setup .Net Core 3.1
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: ${{ matrix.dotnet }}
-      
+        dotnet-version: '3.1.x'
+     
+    - name: Setup .Net 5
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '5.0.x'
+
+    - name: Get .NET information
+      run: dotnet --info
+
     - name: Restore NuGet Packages
       run: dotnet restore
 
