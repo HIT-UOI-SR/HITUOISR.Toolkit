@@ -5,7 +5,7 @@ namespace HITUOISR.Toolkit.Settings
     /// <summary>
     /// <seealso cref="ISettingsKeyValue"/> 的实现。
     /// </summary>
-    public class SettingsKeyValue : ISettingsKeyValue
+    internal class SettingsKeyValue : ISettingsKeyValue
     {
         /// <summary>
         /// 初始化。
