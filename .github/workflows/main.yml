@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+    tags: [ v* ]
+    paths-ignore:
+    - '.gitignore'
+    - '*.md'
+  pull_request:
+    paths-ignore:
+    - '.gitignore'
+    - '*.md'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    name: Build on ${{ matrix.os }} with .NET ${{ matrix.dotnet }}
+    strategy:
+      matrix:
+        os: [ 'windows-latest', 'macos-latest', 'ubuntu-latest' ]
+        dotnet: [ '3.1.x', '5.0.x' ]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .Net
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+      
+    - name: Restore NuGet Packages
+      run: dotnet restore
+
+    - name: Build App
+      run: dotnet build
+
+    - name: Run Unit Tests
+      run: dotnet test
