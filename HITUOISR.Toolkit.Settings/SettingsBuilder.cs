@@ -1,4 +1,4 @@
-﻿using HITUOISR.Toolkit.Common;
+﻿using HITUOISR.Toolkit.Common.Comparers;
 using System;
 using System.Collections.Generic;
 
