@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace HITUOISR.Toolkit.Common
+namespace HITUOISR.Toolkit.Common.Comparers
 {
     /// <summary>
     /// 比较器工具。
