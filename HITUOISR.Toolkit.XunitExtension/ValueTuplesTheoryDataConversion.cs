@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Xunit;
 
@@ -7,6 +8,7 @@ namespace HITUOISR.Toolkit.XunitExtension
     /// <summary>
     /// 元组序列与 <seealso cref="TheoryData"/> 的辅助转换方法。
     /// </summary>
+    [ExcludeFromCodeCoverage]
     public static class ValueTuplesTheoryDataConversion
     {
         /// <summary>

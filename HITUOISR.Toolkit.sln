@@ -32,7 +32,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.Model.Tests", "HITUOISR.Toolkit.Settings.Model.Tests\HITUOISR.Toolkit.Settings.Model.Tests.csproj", "{4FE86C91-A1A6-42A0-AAB4-237A02FDB2CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.Settings.Json.Tests", "HITUOISR.Toolkit.Settings.Json.Tests\HITUOISR.Toolkit.Settings.Json.Tests.csproj", "{35306AB5-1CD9-44B8-A4BF-C523FF0CBBD2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HITUOISR.Toolkit.Settings.Json.Tests", "HITUOISR.Toolkit.Settings.Json.Tests\HITUOISR.Toolkit.Settings.Json.Tests.csproj", "{35306AB5-1CD9-44B8-A4BF-C523FF0CBBD2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HITUOISR.Toolkit.XunitExtension.Tests", "HITUOISR.Toolkit.XunitExtension.Tests\HITUOISR.Toolkit.XunitExtension.Tests.csproj", "{78031C0E-BDE3-4CA6-A3ED-2E74DE1941E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +94,10 @@ Global
 		{35306AB5-1CD9-44B8-A4BF-C523FF0CBBD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35306AB5-1CD9-44B8-A4BF-C523FF0CBBD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35306AB5-1CD9-44B8-A4BF-C523FF0CBBD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78031C0E-BDE3-4CA6-A3ED-2E74DE1941E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78031C0E-BDE3-4CA6-A3ED-2E74DE1941E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78031C0E-BDE3-4CA6-A3ED-2E74DE1941E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78031C0E-BDE3-4CA6-A3ED-2E74DE1941E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
