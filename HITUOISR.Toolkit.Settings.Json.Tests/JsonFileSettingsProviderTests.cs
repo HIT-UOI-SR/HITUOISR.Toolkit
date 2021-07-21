@@ -4,6 +4,8 @@ using Microsoft.Extensions.FileProviders;
 using System;
 using System.Diagnostics.Contracts;
 using System.Drawing;
+using System.IO;
+using System.Reflection;
 using System.Text.Json;
 using Xunit;
 
@@ -11,18 +13,8 @@ namespace HITUOISR.Toolkit.Settings.Json.Tests
 {
     public class JsonFileSettingsProviderTests
     {
-        private static string SampleJson => @$"{{
-""num"": 10,
-""num.real"": ""{double.NaN}"",
-""text.lipsum"": ""Lorem ipsum dolor sit amet"",
-""point"": {{
-    ""x"": 3,
-    ""y"": 4,
-}},
-""array.real"": [ -1, {Math.E}, {Math.PI} ],
-""unused"": null
-}}";
-
+        private static readonly string BaseDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+        private static readonly string PhysicalFileName = "file-settings.json";
         private static TheoryData<string, object> LoadExistsTestData() => new()
         {
             {
@@ -43,7 +35,7 @@ namespace HITUOISR.Toolkit.Settings.Json.Tests
             },
             {
                 "array.real",
-                new[] { -1, Math.E, Math.PI }
+                new[] { -1, 2.35e14, Math.PI }
             }
         };
 
@@ -51,10 +43,9 @@ namespace HITUOISR.Toolkit.Settings.Json.Tests
         [MemberData(nameof(LoadExistsTestData))]
         public void TryLoad_Exists<T>(string key, T expected)
         {
-            using var file = CreateTempFile(SampleJson);
-            JsonFileSettingsSource source = new(file.File.Name)
+            JsonFileSettingsSource source = new(PhysicalFileName)
             {
-                FileProvider = new PhysicalFileProvider(file.File.DirectoryName),
+                FileProvider = new PhysicalFileProvider(BaseDirectory),
             };
             JsonFileSettingsProvider provider = new(source);
             SettingsKeyInfo keyInfo = new(key, typeof(T));
@@ -71,10 +62,9 @@ namespace HITUOISR.Toolkit.Settings.Json.Tests
         [InlineData(".lipsum")]
         public void TryLoad_NotExists(string key)
         {
-            using var file = CreateTempFile(SampleJson);
-            JsonFileSettingsSource source = new(file.File.Name)
+            JsonFileSettingsSource source = new(PhysicalFileName)
             {
-                FileProvider = new PhysicalFileProvider(file.File.DirectoryName),
+                FileProvider = new PhysicalFileProvider(BaseDirectory),
             };
             JsonFileSettingsProvider provider = new(source);
             SettingsKeyInfo keyInfo = new(key, typeof(object));
@@ -119,7 +109,7 @@ namespace HITUOISR.Toolkit.Settings.Json.Tests
         [MemberData(nameof(SaveTestData))]
         public void Save_AfterModified<T>(string key, T value, string expectedJsonText)
         {
-            using var file = CreateTempFile(SampleJson);
+            using var file = CreateTempFile();
             JsonFileSettingsSource source = new(file.File.Name)
             {
                 FileProvider = new PhysicalFileProvider(file.File.DirectoryName),
@@ -141,13 +131,11 @@ namespace HITUOISR.Toolkit.Settings.Json.Tests
             Assert.Equal(expectedJson, fulldoc.RootElement.GetProperty(key), new JsonElementEqualityComparer(StringComparer.OrdinalIgnoreCase));
         }
 
-        private static TemporaryFile CreateTempFile(string content)
+        private static TemporaryFile CreateTempFile()
         {
-            TemporaryFile file = new();
-            using (var writer = file.File.AppendText())
-            {
-                writer.Write(content);
-            }
+            TemporaryFile file = new(BaseDirectory);
+            using var writer = file.File.AppendText();
+            writer.Write(File.ReadAllText(Path.Combine(BaseDirectory, PhysicalFileName)));
             return file;
         }
     }

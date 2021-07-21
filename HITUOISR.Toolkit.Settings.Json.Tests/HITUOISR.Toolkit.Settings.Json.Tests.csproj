@@ -1,8 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="file-settings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="file-settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\HITUOISR.Toolkit.Settings.Json\HITUOISR.Toolkit.Settings.Json.csproj" />

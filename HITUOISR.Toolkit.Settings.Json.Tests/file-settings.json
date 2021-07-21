@@ -1,0 +1,11 @@
+﻿{
+  "num": 10,
+  "num.real": "NaN",
+  "text.lipsum": "Lorem ipsum dolor sit amet",
+  "point": {
+    "x": 3,
+    "y": 4
+  },
+  "array.real": [ -1, 2.35e14, 3.141592653589793 ],
+  "unused": null
+}
