@@ -1,0 +1,11 @@
+﻿{
+  "num": 42,
+  "num.real": -1.7E308,
+  "text.lipsum": "Quisque consectetur finibus arcu",
+  "point": {
+    "x": 7,
+    "y": -5
+  },
+  "array.real": [ "NaN", 2.718281828459045 ],
+  "unused": true
+}
