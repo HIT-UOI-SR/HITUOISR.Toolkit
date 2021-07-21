@@ -51,9 +51,9 @@ namespace HITUOISR.Toolkit.Settings.FileBase
         {
             IFileInfo? file = Source.FileProvider?.GetFileInfo(Source.Path);
             if (file is null) return false;
-            using var stream = OpenWrite(file);
             try
             {
+                using var stream = OpenWrite(file);
                 Save(stream);
                 return true;
             }
