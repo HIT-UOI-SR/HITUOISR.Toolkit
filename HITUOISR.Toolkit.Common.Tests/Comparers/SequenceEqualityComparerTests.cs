@@ -15,11 +15,11 @@ namespace HITUOISR.Toolkit.Common.Comparers.Tests
             },
         };
 
-        private static TheoryData<string[], List<string>> StringEqualData() => new()
+        private static TheoryData<string?[], List<string?>> StringEqualData() => new()
         {
             {
-                new[] { "AB", "2", "#" },
-                new() { "AB", "2", "#" }
+                new[] { "AB", "2", "#", string.Empty },
+                new() { "AB", "2", "#", string.Empty }
             },
         };
 
@@ -41,11 +41,11 @@ namespace HITUOISR.Toolkit.Common.Comparers.Tests
             },
         };
 
-        private static TheoryData<string[], string[]> StringNotEqualData() => new()
+        private static TheoryData<string?[], string?[]> StringNotEqualData() => new()
         {
             {
-                new[] { "AB", "2", "#" },
-                new[] { "aB", " 2", "#" }
+                new[] { "AB", "2", "#" ,string.Empty },
+                new[] { "aB", " 2", "#", null }
             },
         };
 

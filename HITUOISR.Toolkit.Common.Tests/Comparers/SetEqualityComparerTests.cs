@@ -14,11 +14,11 @@ namespace HITUOISR.Toolkit.Common.Comparers.Tests
             },
         };
 
-        private static TheoryData<HashSet<string>, SortedSet<string>> StringEqualTestData() => new()
+        private static TheoryData<HashSet<string?>, SortedSet<string?>> StringEqualTestData() => new()
         {
             {
-                new() { "a", "Ab", "#" },
-                new() { "Ab", "#", "a" }
+                new() { "a", string.Empty, "Ab", "#" },
+                new() { "Ab", "#", "a", string.Empty }
             },
         };
 
@@ -40,11 +40,11 @@ namespace HITUOISR.Toolkit.Common.Comparers.Tests
             },
         };
 
-        private static TheoryData<HashSet<string>, SortedSet<string>> StringNotEqualTestData() => new()
+        private static TheoryData<HashSet<string?>, SortedSet<string?>> StringNotEqualTestData() => new()
         {
             {
-                new() { "a", "Ab", "#" },
-                new() { "AB", "#", "A" }
+                new() { "a", "Ab", "#", string.Empty },
+                new() { "AB", "#", "A", null }
             },
         };
 
