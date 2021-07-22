@@ -70,7 +70,7 @@ namespace HITUOISR.Toolkit.XunitExtension.Tests
         public void Ctor_AsExpected<T>(TheoryData<bool, T, T> expected, IEnumerable<(bool, T, T)> source)
         {
             EqualityCommutativeData<T> data = new(source);
-            Assert.Equal(expected.AsValueTuples(), data.AsValueTuples());
+            Assert.Equal<object[]>(expected, data);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace HITUOISR.Toolkit.XunitExtension.Tests
         public void Ctor_AsExpected<T>(TheoryData<int, T, T> expected, IEnumerable<(int, T, T)> source)
         {
             ComparationCommutativeData<T> data = new(source);
-            Assert.Equal(expected.AsValueTuples(), data.AsValueTuples());
+            Assert.Equal<object[]>(expected, data);
         }
 
         private static TheoryData<TheoryData<int, int, int, string>, List<(int, int, int, string)>> IntExtraTestData() => new()
@@ -52,7 +52,7 @@ namespace HITUOISR.Toolkit.XunitExtension.Tests
         public void CtorExtra_AsExpected<T, TExtra>(TheoryData<int, T, T, TExtra> expected, IEnumerable<(int, T, T, TExtra)> source)
         {
             ComparationCommutativeData<T, TExtra> data = new(source);
-            Assert.Equal(expected.AsValueTuples(), data.AsValueTuples());
+            Assert.Equal<object[]>(expected, data);
         }
     }
 }
