@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HITUOISR.Toolkit.XunitExtension\HITUOISR.Toolkit.XunitExtension.csproj" />
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.Settings\src\HITUOISR.Toolkit.Settings.csproj" />
   </ItemGroup>
 
 </Project>

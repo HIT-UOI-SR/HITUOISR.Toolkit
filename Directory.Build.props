@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <CurrentTargetFrameworks>netcoreapp3.1;net5.0</CurrentTargetFrameworks>
+    <LangVersion>9</LangVersion>
+    <Nullable>enable</Nullable>
+
+    <_projectDirName>$([System.IO.Path]::GetFileName('$(MSBuildProjectDirectory)'))</_projectDirName>
+    <IsSourceProject Condition="'$(_projectDirName)' == 'src'">true</IsSourceProject>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(IsSourceProject)' != 'true'">
+    <IsTestProject Condition="'$(IsTestProject)' == ''">false</IsTestProject>
+    <IsTestProject Condition="'$(_projectDirName)' == 'tests' or $(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
+  </PropertyGroup>
+</Project>

@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HITUOISR.Toolkit.Settings\HITUOISR.Toolkit.Settings.csproj" />
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.Settings\src\HITUOISR.Toolkit.Settings.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.1;net5.0</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.PluginBase\src\HITUOISR.Toolkit.PluginBase.csproj" />
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.Settings.Model\src\HITUOISR.Toolkit.Settings.Model.csproj" />
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.Settings\src\HITUOISR.Toolkit.Settings.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HITUOISR.Toolkit.Settings.Json\HITUOISR.Toolkit.Settings.Json.csproj" />
+    <ProjectReference Include="..\src\HITUOISR.Toolkit.Settings.Json.csproj" />
   </ItemGroup>
 
 </Project>

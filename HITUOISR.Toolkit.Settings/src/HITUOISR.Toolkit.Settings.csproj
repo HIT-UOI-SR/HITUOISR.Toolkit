@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\HITUOISR.Toolkit.Common\HITUOISR.Toolkit.Common.csproj" />
-    <ProjectReference Include="..\HITUOISR.Toolkit.Settings.Abstraction\HITUOISR.Toolkit.Settings.Abstraction.csproj" />
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.Common\src\HITUOISR.Toolkit.Common.csproj" />
+    <ProjectReference Include="..\..\HITUOISR.Toolkit.Settings.Abstraction\src\HITUOISR.Toolkit.Settings.Abstraction.csproj" />
   </ItemGroup>
 
 </Project>

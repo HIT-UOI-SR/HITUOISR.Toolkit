@@ -1,9 +1,4 @@
 <Project>
-  <PropertyGroup>
-    <LangVersion>9</LangVersion>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
-
   <!-- AssemblyInfo -->
   <PropertyGroup>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
@@ -19,16 +14,11 @@
     <InformationalVersion Condition="'$(InformationalVersion)' == ''">1.0.0.0</InformationalVersion>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <IsTestProject Condition="'$(IsTestProject)' == ''">false</IsTestProject>
-    <IsTestProject Condition="$(MSBuildProjectName.EndsWith('.Tests'))">true</IsTestProject>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(IsTestProject)' != 'true'">
+  <PropertyGroup Condition="'$(IsSourceProject)' == 'true'">
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup Condition="'$(IsTestProject)' != 'true'">
+  <ItemGroup Condition="'$(IsSourceProject)' == 'true'">
     <InternalsVisibleTo Include="$(MSBuildProjectName).Tests"/>
   </ItemGroup>
 
