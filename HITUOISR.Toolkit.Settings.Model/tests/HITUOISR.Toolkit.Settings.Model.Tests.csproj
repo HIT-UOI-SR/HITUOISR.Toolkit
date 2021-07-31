@@ -8,8 +8,4 @@
     <PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\src\HITUOISR.Toolkit.Settings.Model.csproj" />
-  </ItemGroup>
-
 </Project>

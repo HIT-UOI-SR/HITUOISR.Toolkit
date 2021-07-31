@@ -9,7 +9,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\HITUOISR.Toolkit.Settings.csproj" />
     <ProjectReference Include="..\..\HITUOISR.Toolkit.XunitExtension\src\HITUOISR.Toolkit.XunitExtension.csproj" />
   </ItemGroup>
 
